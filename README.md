@@ -14,6 +14,7 @@ Central documentation hub for all FreeSTAR Network projects, built with [MkDocs 
 - **[FreeSTAR Multi-Mode](multi-mode/)** - Versatile multi-mode communication platform
 - **[FreeSTAR SystemX](systemx/)** - Network management system for amateur radio
 - **[FreeSTAR ModuleX](modulex/)** - Modular component system for custom solutions
+- **[SIP-DMR Portal](sip-dmr/)** - SIP to DMR bridge portal (exchange, bridge, PBX integration)
 
 ## 🚀 Quick Start
 

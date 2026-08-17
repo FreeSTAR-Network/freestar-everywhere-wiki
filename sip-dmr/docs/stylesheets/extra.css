@@ -1,0 +1,160 @@
+/* Modern, glossy custom styles for FreeSTAR Wiki */
+/* Note: Each wiki has its own copy of this CSS file to allow for future wiki-specific customizations */
+
+:root {
+  --md-primary-fg-color: #3f51b5;
+  --md-primary-fg-color--light: #5c6bc0;
+  --md-primary-fg-color--dark: #303f9f;
+}
+
+/* Add glossy effect to cards and containers */
+.md-typeset .admonition,
+.md-typeset details {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  border-left-width: 4px;
+  transition: all 0.3s ease;
+}
+
+.md-typeset .admonition:hover,
+.md-typeset details:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Glossy header effect */
+.md-header {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+/* Modern code blocks */
+.md-typeset pre > code {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+}
+
+/* Glossy buttons */
+.md-typeset .md-button {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.md-typeset .md-button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.md-typeset .md-button--primary {
+  background: linear-gradient(135deg, var(--md-primary-fg-color) 0%, var(--md-primary-fg-color--dark) 100%);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced navigation */
+.md-nav__item {
+  transition: all 0.2s ease;
+}
+
+.md-nav__item:hover {
+  transform: translateX(4px);
+}
+
+/* Search box enhancement */
+.md-search__form {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.md-search__form:hover,
+.md-search__form:focus-within {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Glossy tables */
+.md-typeset table:not([class]) {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background: linear-gradient(135deg, var(--md-primary-fg-color) 0%, var(--md-primary-fg-color--light) 100%);
+}
+
+/* Content wrapper with subtle shadow */
+.md-content {
+  background: var(--md-default-bg-color);
+}
+
+/* Improved link styling */
+.md-typeset a {
+  transition: all 0.2s ease;
+}
+
+.md-typeset a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+}
+
+/* Gradient backgrounds for dark mode */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #1a1a2e;
+  --md-default-fg-color: #eee;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+/* Card-like appearance for main content */
+.md-main__inner {
+  margin-top: 1rem;
+}
+
+.md-content__inner {
+  padding-top: 1rem;
+}
+
+/* Hero section styling */
+.md-typeset h1:first-child {
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--md-primary-fg-color) 0%, var(--md-accent-fg-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Improved footer */
+.md-footer {
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth transitions for theme toggle */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Enhanced TOC */
+.md-sidebar--secondary {
+  backdrop-filter: blur(10px);
+}
+
+/* Modern badge style for labels */
+.md-typeset .badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}

@@ -37,6 +37,7 @@ jobs:
           cd multi-mode && mkdocs build && cd ..
           cd systemx && mkdocs build && cd ..
           cd modulex && mkdocs build && cd ..
+          cd sip-dmr && mkdocs build && cd ..
           
           # Create main site directory
           mkdir -p site
@@ -46,6 +47,7 @@ jobs:
           cp -r multi-mode/site site/multi-mode
           cp -r systemx/site site/systemx
           cp -r modulex/site site/modulex
+          cp -r sip-dmr/site site/sip-dmr
           
           # Copy main index
           cp index.html site/index.html
