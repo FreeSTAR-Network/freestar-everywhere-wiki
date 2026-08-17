@@ -13,7 +13,8 @@ WIKIS = [
     "everywhere",
     "multi-mode",
     "systemx",
-    "modulex"
+    "modulex",
+    "sip-dmr",
 ]
 
 # Base directory
