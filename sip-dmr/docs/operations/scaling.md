@@ -1,6 +1,6 @@
 # Scaling
 
-Phased plan to grow from a small portal (`MAX_ACTIVE_CALLS=2` on ~1 GB RAM) to **10+ concurrent calls**.
+Phased plan to grow from a small portal (`MAX_ACTIVE_CALLS=2` on ~1 GB RAM) to **10+ concurrent calls per instance**.
 
 ## Checklist
 
@@ -12,7 +12,7 @@ Phased plan to grow from a small portal (`MAX_ACTIVE_CALLS=2` on ~1 GB RAM) to *
 
 ---
 
-## Current architecture (single host)
+## Current architecture
 
 ```mermaid
 flowchart LR
@@ -94,7 +94,7 @@ flowchart TB
   BridgesB --> DMR
 ```
 
-### Option A — N identical portal nodes (simplest)
+### Option A — N identical portal nodes
 
 - Each VM: exchange + Docker + optional nginx dashboard
 - PBX trunk → SIP proxy (Kamailio/OpenSIPS) with call stickiness
@@ -104,6 +104,14 @@ flowchart TB
 
 - Exchange provisions bridges on remote hosts via new backend (SSH/API)
 - More engineering; exchange dials worker bridge network
+
+### Option C - Explore Open DMR / VAFM HomeBrew DMR 
+
+- Would probably require a refactor of sip-dmr-bridge, unlikely option
+
+### Option D - Optimise current stack 
+
+- Optimise sip-dmr-bridge for less RAM usage, CPU usage
 
 ### Software milestones
 
@@ -118,14 +126,6 @@ flowchart TB
 - Firewall UDP 5060 from PBX to each worker
 - Same `SIP_AUTH_TOKEN` on all workers
 - `HOST_IP` per worker = that node's public IP
-
----
-
-## What does not need to change for 10 calls
-
-- **sip-dmr-bridge** image (unique local port per bridge already)
-- **sip-dmr-exchange-dashboard** (static per node)
-- Thin deploy workflow (not full rebuild every time)
 
 ---
 
