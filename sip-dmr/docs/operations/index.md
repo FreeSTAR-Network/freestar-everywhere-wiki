@@ -1,6 +1,6 @@
 # Operations
 
-Day-2 operations for running a SIP-DMR portal.
+Operations for running a SIP-DMR portal.
 
 | Guide | Description |
 |-------|-------------|
