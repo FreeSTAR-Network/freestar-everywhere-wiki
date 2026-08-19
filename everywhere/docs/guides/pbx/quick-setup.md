@@ -7,8 +7,9 @@ This guide explains how to create an IAX2 extension in FreePBX 17 so your PBX ca
 ## 1. Gather Required Information from RF-Link Applicant
 
 Ensure you have the following details from the RF-Link node owner:
+
 - **Callsign:** The callsign of the individual or club applying for the RF-link.
-- **Extension Name:** The RF-Link display name (phonebook) 
+- **Extension Name:** The RF-Link display name (phonebook)
 - **Licence Document:** Copy of the license document for callsign or club.
 - **IAX Dial String:** The complete connection dial string in the format `IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE`. Direct the applicant to [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/). Dial string must be obtained from RF-Link applicant to complete the setup of the extension.
 
@@ -25,11 +26,13 @@ IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE
 ```
 
 **Example:**
+
 ```text
 IAX2/freestar:passw0rd@40071.nodes.allstarlink.org:4569/40071
 ```
 
 **Components:**
+
 - `freestar` = Username (normally callsign of node owner or club call)
 - `passw0rd` = Password/secret
 - `40071.nodes.allstarlink.org` = Node's public DNS or IP address
@@ -52,18 +55,18 @@ IAX2/freestar:passw0rd@40071.nodes.allstarlink.org:4569/40071
 
 ### Advanced Tab Configuration
 
-3. Click on the **Advanced** tab
-4. Configure the following settings:
+1. Click on the **Advanced** tab
+2. Configure the following settings:
 
-- **Transfer:** `no`
-- **Host:** Enter the node's hostname (e.g., `40071.nodes.allstarlink.org`) or IP address
-- **Port:** Enter the IAX port (e.g., `4569`, or custom port specified by the RF-Link owner)
-- **Qualify:** `yes`
-- **Disallow:** `all`
-- **Allow:** `ulaw`
-- **Dial:** `IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE`
+    - **Transfer:** `no`
+    - **Host:** Enter the node's hostname (e.g., `40071.nodes.allstarlink.org`) or IP address
+    - **Port:** Enter the IAX port (e.g., `4569`, or custom port specified by the RF-Link owner)
+    - **Qualify:** `yes`
+    - **Disallow:** `all`
+    - **Allow:** `ulaw`
+    - **Dial:** `IAX2/USERNAME:PASSWORD@NODE-HOSTNAME:PORT/NODE`
 
-5. Click **Submit** and then **Apply Config**
+3. Click **Submit** and then **Apply Config**
 
 ### Firewall Considerations
 
@@ -74,9 +77,11 @@ If your PBX is behind NAT/firewall, ensure outbound UDP traffic to the node's IP
 ## 4. Test the Connection
 
 1. Use the Asterisk CLI to verify the connection:
+
    ```bash
    asterisk -rx "iax2 show peers"
    ```
+
    - Look for your new RF-Link extension in the list
    - Status should show "OK" if the node is reachable (BLF will be green)
    - If the node is "UNKNOWN" or "OFFLINE", the BLF will be grey
@@ -98,6 +103,7 @@ If your PBX is behind NAT/firewall, ensure outbound UDP traffic to the node's IP
   
 - **Debugging:**
   - Use Asterisk logs for detailed information:
+
     ```bash
     asterisk -rvv
     ```

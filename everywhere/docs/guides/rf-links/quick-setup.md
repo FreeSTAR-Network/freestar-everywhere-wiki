@@ -7,8 +7,9 @@ For registration of an IAX2 extension (RF-Link) to FreeSTAR Everywhere
 ## 1. Supply Your Credentials
 
 Open a ticket with [https://support.freestareverywhere.com](https://support.freestareverywhere.com) and supply the PBX admin with the following information:
+
 - **Callsign:** The callsign of the individual or club applying for the RF-link.
-- **Extension Name:** The RF-Link display name (phonebook) 
+- **Extension Name:** The RF-Link display name (phonebook)
 - **IAX Dial String:** The string you need to provide the PBX admin to configure your extension. Use the [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/) to create this.
 - **License Document:** Copy of the license document for callsign or club.
 
@@ -81,6 +82,7 @@ Forward UDP port 4569 (or your custom port) to your node’s IP address if neede
 asterisk -rx "dialplan reload"
 asterisk -rx "iax2 reload"
 ```
+
 Or use your control GUI’s "Reload" function.
 
 ---
