@@ -4,8 +4,8 @@ site_description: Voice over Internet Protocol (VoIP) service for licensed amate
 theme:
   name: material
   custom_dir: overrides
-  logo: material/phone-voip
-  favicon: material/star
+#  logo: material/phone-voip
+#  favicon: material/star
   features:
     - navigation.instant
     - navigation.instant.prefetch
@@ -60,13 +60,32 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
+    logo: material/phone-voip
+    favicon: material/star
 
 nav:
-  - Home: index.md
-  - Getting Started: getting-started.md
-  - Guides: guides/index.md
-  - About: about.md
-  - Changelog: CHANGELOG.md
+  - Home: 
+    - index.md
+  - About: 
+     - about.md
+  - Guides: 
+    - guides/index.md
+    - Endpoints: 
+      - guides/endpoints/index.md
+      - Hardphones: guides/endpoints/hardphones/index.md
+      - Softphones: guides/endpoints/softphones/index.md
+    - PBX Trunks: 
+      - guides/pbx/index.md
+      - Quick Setup: guides/pbx/quick-setup.md
+    - RF Links: 
+      - guides/rf-links/index.md
+      - Quick Setup: guides/rf-links/quick-setup.md
+    - Podcasts: guides/podcasts/index.md
+    - Features: guides/features/index.md
+  - Tools: 
+    - tools.md
+  - Changelog: 
+    - CHANGELOG.md
 
 plugins:
   - search
