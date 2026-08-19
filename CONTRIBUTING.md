@@ -11,28 +11,34 @@ Thank you for your interest in contributing to the FreeSTAR Network documentatio
 - [Style Guide](#style-guide)
 - [Submitting Changes](#submitting-changes)
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Fork the repository** on GitHub
 2. **Clone your fork:**
+
    ```bash
    git clone https://github.com/YOUR-USERNAME/wiki.git
    cd wiki
    ```
+
 3. **Install dependencies:**
+
    ```bash
    pip install -r requirements.txt
    ```
+
 4. **Create a branch:**
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
-## 🤝 How to Contribute
+## How to Contribute
 
 ### Adding or Updating Content
 
 1. Navigate to the appropriate wiki directory:
+
    ```bash
    cd [wiki-name]/docs
    ```
@@ -40,6 +46,7 @@ Thank you for your interest in contributing to the FreeSTAR Network documentatio
 2. Create or edit Markdown files
 
 3. If adding a new page, update the navigation in `mkdocs.yml`:
+
    ```yaml
    nav:
      - Home: index.md
@@ -47,21 +54,24 @@ Thank you for your interest in contributing to the FreeSTAR Network documentatio
    ```
 
 4. Test your changes locally:
+
    ```bash
    cd [wiki-name]
    mkdocs serve
    ```
 
-5. View at http://localhost:8000
+5. View at [http://localhost:8000](http://localhost:8000)
 
 ### Adding Images
 
 1. Place images in the wiki's `docs/img/` directory:
+
    ```bash
    cp image.png [wiki-name]/docs/img/
    ```
 
 2. Reference in your Markdown:
+
    ```markdown
    ![Description](img/image.png)
    ```
@@ -76,11 +86,11 @@ nav:
   - External Resource: https://example.com/docs
 ```
 
-## 📁 Wiki Structure
+## Wiki Structure
 
 Each wiki follows this structure:
 
-```
+```text
 [wiki-name]/
 ├── mkdocs.yml              # Configuration
 ├── docs/
@@ -93,7 +103,7 @@ Each wiki follows this structure:
 └── site/                  # Generated (ignored by git)
 ```
 
-## ✍️ Writing Documentation
+## Writing Documentation
 
 ### Markdown Basics
 
@@ -160,7 +170,7 @@ Types: `note`, `abstract`, `info`, `tip`, `success`, `question`, `warning`, `fai
 | Value 4  | Value 5  | Value 6  |
 ```
 
-## 📖 Style Guide
+## Style Guide
 
 ### General Guidelines
 
@@ -197,11 +207,12 @@ Types: `note`, `abstract`, `info`, `tip`, `success`, `question`, `warning`, `fai
 - Show the expected output when relevant
 - Test all code examples before committing
 
-## 📤 Submitting Changes
+## Submitting Changes
 
 ### Before Submitting
 
 1. **Test locally:**
+
    ```bash
    cd [wiki-name]
    mkdocs serve
@@ -212,6 +223,7 @@ Types: `note`, `abstract`, `info`, `tip`, `success`, `question`, `warning`, `fai
 3. **Review spelling and grammar**
 
 4. **Build all wikis to ensure no errors:**
+
    ```bash
    python build_all_wikis.py
    ```
@@ -219,12 +231,14 @@ Types: `note`, `abstract`, `info`, `tip`, `success`, `question`, `warning`, `fai
 ### Creating a Pull Request
 
 1. **Commit your changes:**
+
    ```bash
    git add .
    git commit -m "Brief description of changes"
    ```
 
 2. **Push to your fork:**
+
    ```bash
    git push origin feature/your-feature-name
    ```
@@ -241,11 +255,11 @@ Types: `note`, `abstract`, `info`, `tip`, `success`, `question`, `warning`, `fai
 - **Test your changes** - Ensure everything builds correctly
 - **Be responsive** - Address feedback from reviewers
 
-## 🎨 Creating a New Wiki
+## Creating a New Wiki
 
 To add an entirely new wiki to the repository, see the [templates/README.md](templates/README.md) guide.
 
-## 🐛 Reporting Issues
+## Reporting Issues
 
 Found a problem? Please [open an issue](https://github.com/FreeSTAR-Network/wiki/issues) with:
 
@@ -255,7 +269,7 @@ Found a problem? Please [open an issue](https://github.com/FreeSTAR-Network/wiki
 - Which wiki is affected
 - Screenshots if relevant
 
-## 💡 Questions?
+## Questions?
 
 If you have questions about contributing:
 
@@ -263,7 +277,7 @@ If you have questions about contributing:
 - Look at recent pull requests for examples
 - Open an issue with your question
 
-## 📜 License
+## License
 
 By contributing, you agree that your contributions will be part of the FreeSTAR Network documentation for licensed amateur radio operators.
 
