@@ -4,8 +4,7 @@ site_description: SIP to DMR bridge portal — self-hosting, PBX integration, an
 theme:
   name: material
   custom_dir: overrides
-  logo: material/radio-tower
-  favicon: material/star
+  favicon: assets/material-star.svg
   features:
     - navigation.instant
     - navigation.instant.prefetch
@@ -58,6 +57,7 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
+    logo: material/radio-tower
 
 nav:
   - Home: index.md
