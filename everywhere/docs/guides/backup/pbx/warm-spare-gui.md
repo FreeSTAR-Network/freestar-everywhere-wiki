@@ -133,6 +133,7 @@ This guide will walk you through setting up a **warm spare** for FreePBX 17 usin
    - You can check **Admin → Backup & Restore → Restore** for restore logs.
 
 2. Optionally, check logs via SSH:
+
    ```bash
    tail -f /var/log/asterisk/backup.log
    ```
@@ -143,10 +144,12 @@ This guide will walk you through setting up a **warm spare** for FreePBX 17 usin
 
 4. **Prevent Accidental Conflict:**
    - Keep Asterisk/FreePBX services stopped on the Spare to avoid registration or trunk conflicts:
+
      ```bash
      fwconsole stop
      systemctl disable asterisk
      ```
+
    - Only start these during failover.
 
 ---
@@ -156,9 +159,11 @@ This guide will walk you through setting up a **warm spare** for FreePBX 17 usin
 1. **When Primary PBX Fails:**
    - Assign the Primary's IP/DNS to the Spare PBX, if required (or use DNS to re-point phones/trunks).
    - Start Asterisk/FreePBX services on the Spare:
+
      ```bash
      fwconsole start
      ```
+
    - Verify endpoints and SIP trunks register.
    - Conduct test calls to ensure PBX services are working.
 
@@ -188,4 +193,4 @@ This guide will walk you through setting up a **warm spare** for FreePBX 17 usin
 
 **Created by:**  
 Shane Daley M0VUB  
-Date: 06-12-2025 
+Date: 06-12-2025
