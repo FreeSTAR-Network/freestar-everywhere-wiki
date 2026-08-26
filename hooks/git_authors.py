@@ -47,6 +47,20 @@ def on_page_markdown(markdown, page, config, files):
     """
     Hook that runs on each page's markdown content.
     Adds git author to page metadata.
+
+
+    This is a MkDocs hook with a standardized signature. The 'files' parameter
+    is required by the MkDocs hook interface even if not used in this implementation.
+
+    Args:
+        markdown: The markdown content
+        page: The page object
+        config: The global config
+        files: All files (required by MkDocs hook interface)
+
+    Returns:
+        str: The markdown content (unchanged)
+
     """
     # 1. Provide a safe default author in case page.file doesn't exist
     raw_author = "Unknown"
